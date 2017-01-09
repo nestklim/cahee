@@ -98,7 +98,7 @@
 			</header>
 
 			<!-- -->
-			<div class="ba-fresh-life ba-width-1-2">
+			<div class="ba-fresh-life ba-section">
 				<h2 class="ba-fresh__title">Fresh Life</h2>
 				<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 				</p>
@@ -111,11 +111,10 @@
 	</div>
 	<main>
 
-		<section id="about" class="ba-about">
+		<section id="about" class="ba-about ba-section">
 			<div class="ba-container">
 				<!--   -->
 				<div class="cf">
-					<img src="img/razz.png" alt="razz">
 					<div class="ba-width-1-2 ba-float-right">
 						<div class="ba-about__text">
 							<h1 class="ba-about__title">About Us</h1>
@@ -124,14 +123,18 @@
 							<p>Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
 						</div>
 					</div>
-
+					<img src="img/razz.png" alt="razz">
 				</div>
 				<!--  -->
 			</div>
 		</section>
 
-		<section id="services" class="ba-services">
+		<section id="services" class="ba-services ba-section">
 			<div class="ba-container cf">
+				<!--   -->
+				<div class="ba-width-1-2 ba-float-right">
+					<h1 class="ba-services__title">Our Services</h1>
+				</div>
 				<!--   -->
 				<div class="ba-width-1-2 ba-float-left">
 					<ul class="ba-services__menu ba-float-right">
@@ -162,32 +165,28 @@
 					</ul>
 				</div>
 				<!--   -->
-				<div class="ba-width-1-2 ba-float-right">
-					<h1 class="ba-services__title">Our Services</h1>
-				</div>
-				<!--  -->
 			</div>
 		</section>
 
-		<section id="gallery" class="ba-gallery">
+		<section id="gallery" class="ba-gallery ba-section">
 			<div class="ba-container">
 				<h1 class="ba-gallery__title">Gallery</h1>
-				<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et<br>
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br>
+				<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 					ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</p>
 
 				<div class="ba-row">
-					<div class="ba-width-2-3"><img src="img/gallery/1.jpg" alt="Peach"></div>
+					<div class="ba-width-2-3"><a href="#"><img src="img/gallery/1.jpg" alt="Peach"></a></div>
 					<div class="ba-width-1-3">
-						<img src="img/gallery/2.jpg" alt="Blueberry">
-						<img src="img/gallery/3.jpg" class="ba-img-bottom" alt="Mulberry">
+						<a href="#"><img src="img/gallery/2.jpg" alt="Blueberry"></a>
+						<a href="#"><img src="img/gallery/3.jpg" class="ba-img-bottom" alt="Mulberry"></a>
 					</div>
 				</div>
 
 				<div class="ba-row">
-					<div class="ba-width-1-2"><img src="img/gallery/4.jpg" alt="Bilberry"></div>
-					<div class="ba-width-1-2"><img src="img/gallery/5.jpg" alt="Persimmon"></div>
+					<div class="ba-width-1-2"><a href="#"><img src="img/gallery/4.jpg" alt="Bilberry"></a></div>
+					<div class="ba-width-1-2"><a href="#"><img src="img/gallery/5.jpg" alt="Persimmon"></a></div>
 				</div>
 
 				<a class="ba-button" href="#">VIEW MORE</a>
@@ -195,23 +194,19 @@
 			</div>
 		</section>
 
-		<section class="ba-subscribe">
+		<section class="ba-subscribe ba-section">
 			<div class="ba-container">
 				<h3 class="ba-subscribe__title">Subscribe To Us</h3>
 				<p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 				</p>
-				<form action="#" class="ba-row" method="post">
-					<div class="ba-width-1-2">
-						<input type="email" name="email" placeholder="Your email address..." required>
-					</div>
-					<div class="ba-width-1-2">
-						<button class="ba-button" type="submit">SUBSCRIBE</button>
-					</div>
+				<form action="#" class="ba--row" method="post">
+					<input type="email" name="email" placeholder="Your email address..." required>
+					<button class="ba-button" type="submit">SUBSCRIBE</button>
 				</form>
 			</div>
 		</section>
 
-		<section id="blog" class="ba-blog">
+		<section id="blog" class="ba-blog ba-section">
 			<div class="ba-container">
 				<h1 class="ba-blog__title">Blog</h1>
 				<p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure<br>dolor in reprehenderit in voluptate velit.
@@ -219,34 +214,34 @@
 
 				<div class="ba-row">
 					<div class="ba-width-1-3">
-						<div class="ba-blog__img">
+						<a href="#" class="ba-blog__img">
 							<img src="img/blog-1.jpg" alt="Juice">
-							<div class="ba-blog__date"><h4>20</h4><h5>NOV</h5></div>
+							<time datetime="16-11-20" class="ba-blog__date">20<span>NOV</span></time>
 							<div class="ba-blog__text">
 								<h5>Green Smoothies: Too Much of a Good Thing?</h5>
 								<p>By Auskteez - 2 hours ago</p>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="ba-width-1-3">
-						<div class="ba-blog__img">
+						<a href="#" class="ba-blog__img">
 							<img src="img/blog-2.jpg" alt="Vegetable soup">
-							<div class="ba-blog__date"><h4>14</h4><h5>NOV</h5></div>
+							<time datetime="16-11-14" class="ba-blog__date">14<span>NOV</span></time>
 							<div class="ba-blog__text">
 								<h5>Growing Food and a “Thirst” for Innovation</h5>
 								<p>By Auskteez - 3 hours ago</p>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="ba-width-1-3">
-						<div class="ba-blog__img">
+						<a href="#" class="ba-blog__img">
 							<img src="img/blog-3.jpg" alt="Raspberries">
-							<div class="ba-blog__date"><h4>10</h4><h5>NOV</h5></div>
+							<time datetime="16-11-10" class="ba-blog__date">10<span>NOV</span></time>
 							<div class="ba-blog__text">
 								<h5>Pesticides &amp; Food: What You Need to Know</h5>
 								<p>By Auskteez - 6 hours ago</p>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 
@@ -255,10 +250,10 @@
 			</div>
 		</section>
 
-		<section id="contact" class="ba-contact">
+		<section id="contact" class="ba-contact ba-section">
 			<div class="ba-container cf">
 				<h1 class="ba-contact__title">Contact</h1>
-				<p>For new projects, ideas, business or anything<br>
+				<p>For new projects, ideas, business or anything
 				you'd like to discuss, contact with me!</p>
 				<div class="ba-width-1-2 ba-float-left">
 					<form action="#" class="ba-contact__form" method="post">
@@ -284,15 +279,18 @@
 	</main>
 	<footer class="ba-footer">
 		<div class="ba-container cf">
-			<div class="ba-width-1-2 ba-float-left">© 2015 Company. All right reserved.</div>
-			<div class="ba-width-1-2 ba-footer__made ba-float-right">
+			<div class="ba-width-1-3 ba-footer__copy ba-float-left">© 2015 Company. All right reserved.</div>
+
+			<div class="ba-width-1-3 ba-float-left">
+				<a class="ba-footer__logo" href="#">
+					<svg width="64" height="28">
+						<use xlink:href="#logo"/>
+					</svg>
+				</a>
+			</div>
+			<div class="ba-width-1-3 ba-footer__made ba-float-right">
 				Made with <span>love</span> by <a href="#">Auskteez</a>
 			</div>
-			<a class="ba-footer__logo" href="#">
-				<svg width="64" height="28">
-					<use xlink:href="#logo"/>
-				</svg>
-			</a>
 		</div>
 	</footer>
 </body>
