@@ -6,6 +6,7 @@
 body{
 	font:300 17px/1.5882 'Raleway', Arial, sans-serif;
 	color: #262626;
+	transition: transform .4s;
 }
 
 /* Layout */
@@ -140,6 +141,7 @@ textarea {
 	position: relative;
 	&__logo{
 		float: left;
+		margin-right: 50px;
 	}
 }
 @media (max-width: 540px){
@@ -149,47 +151,149 @@ textarea {
 }
 .ba-nav{
 	float: right;
-
+}
+@media (max-width: 780px) and (min-width: 604px){
+	.ba-nav{
+		margin-top: 40px;
+	}
 }
 .ba-menu{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	font-weight: 700;
-
-	li{
-		float: left;
-		padding-left: 39px;
-		&:first-child{
-			padding-left: 0;
-		}
-		a{
-			display: block;
-			letter-spacing: -0.05em;
-			position: relative;
-			line-height: 52px;
-			&:before{
-				display: block;
-				position: absolute;
-				content: "";
-				background-color:  #ff6033;
-				height: 1px;
-				left: 0;
-				right: 0;
-				top: 8px;
-				opacity: 0;
-				transition: all .3s ease-in;
+	a{
+		display: block;
+		letter-spacing: -0.05em;
+		position: relative;
+		line-height: 52px;
+	}
+}
+@media (min-width: 604px){
+	.ba-menu{
+		li{
+			float: left;
+			padding-left: 39px;
+			&:first-child{
+				padding-left: 0;
 			}
-			&:hover,
-			&.active{
-				&:before{
-					opacity: 1;
-					height: 3px;
-				}
+		}
+		a:before{
+			display: block;
+			position: absolute;
+			content: "";
+			background-color:  #ff6033;
+			height: 1px;
+			left: 0;
+			right: 0;
+			top: 8px;
+			opacity: 0;
+			transition: all .3s ease-in;
+		}
+		a:hover,
+		a.active{
+			&:before{
+				opacity: 1;
+				height: 3px;
 			}
 		}
 	}
 }
+.ba-toggle, .ba-toggle:hover, .ba-toggle:focus{
+	background: none;
+	border: none;
+	padding: 0;
+	line-height: 1;
+	min-height: 0;
+	margin-top: 20px;
+	outline: none;
+}
+.ba-toggle{
+	display: none;
+}
+.ba-toggle__icon{
+	z-index: 99;
+	width: 30px;
+	height: 4px;
+	background: #262626;
+	display: block;
+	position: relative;
+	margin: 10px 0;
+	&:hover{
+		background: #ff6033;
+		&:before, &:after{
+			background: #ff6033;
+		}
+	}
+}
+.ba-toggle__icon:before,
+.ba-toggle__icon:after{
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #262626;
+}
+.ba-toggle__icon:before{
+	transform: translateY(-10px);
+}
+.ba-toggle__icon:after{
+	transform: translateY(10px);
+}
+.ba-menu-open .ba-toggle__icon{
+	background-color: transparent;
+}
+.ba-menu-open .ba-toggle__icon:before{
+	transform: translateY(0) rotate(45deg);
+}
+.ba-menu-open .ba-toggle__icon:after{
+	transform: translateY(0) rotate(-45deg);
+}
+@media (max-width: 603px){
+	.ba-toggle{
+		display: inline-block;
+	}
+	.ba-overlay{
+		position: fixed;
+		z-index: 98;
+		background: rgba(255,255,255, .5);
+		right: 0;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: transform .4s, visibility .4s;
+	}
+	.ba-menu{
+		position: fixed;
+		z-index: 99;
+		width: 150px;
+		background: #FAFAFC;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		transform: translateX(100%);
+	}
+	.ba-menu a{
+		padding: 10px 30px;
+		border-bottom: 1px solid #A8A8A8;
+		&:hover, &.active{
+			color: #FF6033;
+			background: #FFF;
+		}
+	}
+	.ba-menu-open{
+		transform: translateX(-150px);
+	}
+	.ba-menu-open .ba-overlay{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
 .ba-scroll {
 	position: absolute;
 	background: url(../img/scroll.png) no-repeat 50%;
@@ -421,6 +525,7 @@ textarea {
 	.ba-subscribe{
 		input{
 			width: 100%;
+			margin-right: 0;
 		}
 		form{
 			text-align: center;
@@ -583,7 +688,7 @@ textarea {
 		}
 		p{
 			font-size: 20px;
-			margin-bottom: 13px;
+			margin: 0 0 13px;
 		}
 		a:hover{
 			text-decoration: underline;
@@ -665,10 +770,7 @@ textarea {
 		padding: 0;
 	}
 	.ba-contact__contacts{
-		padding: 0;
-		background: rgba(255,255,255,0.2);
 		padding: 20px;
-		margin-top: 30px;
 	}
 	.ba-footer{
 		padding-bottom: 17px;
